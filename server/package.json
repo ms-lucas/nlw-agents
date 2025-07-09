@@ -1,0 +1,32 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --experimental-strip-types --no-warnings --watch --env-file .env src/server.ts",
+    "start": "node --experimental-strip-types --no-warnings --watch --env-file .env src/server.ts",
+    "db:seed": "node --experimental-strip-types --no-warnings --env-file .env src/db/seed.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@biomejs/biome": "2.0.6",
+    "@biomejs/monorepo": "github:biomejs/biome",
+    "@types/node": "^24.0.10",
+    "drizzle-kit": "^0.31.4",
+    "typescript": "^5.8.3",
+    "ultracite": "5.0.32"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.0.1",
+    "drizzle-orm": "^0.44.2",
+    "drizzle-seed": "^0.3.1",
+    "fastify": "^5.4.0",
+    "fastify-type-provider-zod": "^5.0.2",
+    "postgres": "^3.4.7",
+    "zod": "^3.25.76"
+  }
+}
